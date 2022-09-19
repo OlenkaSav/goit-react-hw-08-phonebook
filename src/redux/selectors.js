@@ -11,3 +11,6 @@ export const visibleContacts = ({ filter, contacts }) => {
 };
 
 export const getLoaderStatus = ({ contacts }) => contacts.loading;
+
+export const getAuthError = ({ auth }) => auth.error || {};
+export const isAuth = ({ auth }) => auth.isLogin;
