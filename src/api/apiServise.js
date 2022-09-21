@@ -15,7 +15,7 @@
 //   return data;
 // };
 
-import axios from 'axios';
+// import axios from 'axios';
 import instance from './auth';
 
 export const getContacts = async () => {
