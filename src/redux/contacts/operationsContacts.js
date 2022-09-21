@@ -9,7 +9,7 @@ export const fetchContacts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const data = await api.getContacts();
-      // console.log(data);
+      console.log(data);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -39,21 +39,21 @@ export const addContact = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error);
     }
-  },
-  {
-    //lang context can be used only in conponents!!!!!!!!
-    // condition: (data, { getState }) => {
-    //   const { contacts } = getState();
-    //   if (isDublicate(data, contacts.items)) {
-    //     Report.warning(
-    //       notification1,
-    //       `${data.name}` + notification2,
-    //       notification3
-    //     );
-    //     return false;
-    //   }
-    // },
   }
+  // {
+  //   //lang context can be used only in conponents!!!!!!!!
+  //   // condition: (data, { getState }) => {
+  //   //   const { contacts } = getState();
+  //   //   if (isDublicate(data, contacts.items)) {
+  //   //     Report.warning(
+  //   //       notification1,
+  //   //       `${data.name}` + notification2,
+  //   //       notification3
+  //   //     );
+  //   //     return false;
+  //   //   }
+  //   // },
+  // }
 );
 
 export const deleteContact = createAsyncThunk(
