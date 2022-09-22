@@ -10,13 +10,13 @@ const ContactList = ({ contacts, onDeleteContact }) => {
   const deleteBtn = contentText.delBtn[lang];
   return (
     <ul>
-      {contacts.map(({ name, phone, id }) => (
+      {contacts.map(({ name, number, id }) => (
         <StyledList key={id}>
           <Span>
             <AiOutlinePhone color={`black`} size={30} />
           </Span>
           <p>
-            {name}: {phone}
+            {name}: {number}
           </p>
           <StyledBtn type="button" onClick={() => onDeleteContact(id)}>
             {deleteBtn}

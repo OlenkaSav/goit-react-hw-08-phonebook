@@ -5,12 +5,13 @@ import RegisterForm from '../RegisterForm/RegisterForm';
 
 import { signup } from '../../redux/auth/authOperations';
 
-import { getAuthError, isAuth } from '../../redux/selectors';
+import { getAuthError } from '../../redux/selectors';
+import useAuth from 'hooks/useAuth';
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
   const { status, message } = useSelector(getAuthError);
-  const isLogin = useSelector(isAuth);
+  const isLogin = useAuth();
 
   const onRegister = data => {
     dispatch(signup(data));

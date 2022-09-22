@@ -1,12 +1,15 @@
 import { Link, NavLink } from 'react-router-dom';
+import NavbarAuth from './NavbarAuth';
+import NavbarUser from './NavbarUser';
+import useAuth from 'hooks/useAuth';
 
 const Navbar = () => {
+  const isLogin = useAuth();
   return (
     <div>
       <Link to="/">Logo</Link>
-      <NavLink to="/my-contacts">Contacts</NavLink>|
-      <NavLink to="/register">Register</NavLink>|
-      <NavLink to="/login">Login</NavLink>
+      {isLogin && <NavLink to="/my-contacts">Contacts</NavLink>}
+      {isLogin ? <NavbarUser /> : <NavbarAuth />}
     </div>
   );
 };

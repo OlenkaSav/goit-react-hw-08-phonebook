@@ -37,8 +37,8 @@ function MyContacts() {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const onAddContact = (name, phone) => {
-    const payload = { name, phone };
+  const onAddContact = (name, number) => {
+    const payload = { name, number };
     const action = addContact(payload);
     dispatch(action);
   };

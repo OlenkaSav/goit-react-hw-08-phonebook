@@ -5,12 +5,13 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 
 import { login } from '../../redux/auth/authOperations';
 
-import { getAuthError, isAuth } from '../../redux/selectors';
+import { getAuthError } from '../../redux/selectors';
+import useAuth from 'hooks/useAuth';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
   const { status, message } = useSelector(getAuthError);
-  const isLogin = useSelector(isAuth);
+  const isLogin = useAuth();
 
   const onLogin = data => {
     dispatch(login(data));
