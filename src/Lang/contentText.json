@@ -41,5 +41,33 @@
   "notification3": {
     "en": "OK",
     "ua": "Добре"
+  },
+  "pageContacts": {
+    "en": "Contscts page",
+    "ua": "Сторінка контактів"
+  },
+  "logout": {
+    "en": "Logout",
+    "ua": "Вийти"
+  },
+  "regPage": {
+    "en": "Register page",
+    "ua": "Сторінка реєстрації"
+  },
+  "logPage": {
+    "en": "Login page",
+    "ua": "Сторінка логіна"
+  },
+  "userName": {
+    "en": "Enter user name",
+    "ua": "Введіть ім'я користувача"
+  },
+  "userEmail": {
+    "en": "Enter user email",
+    "ua": "Введіть пошту користувача"
+  },
+  "userPassword": {
+    "en": "Password",
+    "ua": "Пароль"
   }
 }

@@ -4,7 +4,7 @@ import Form from '../Form/Form';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 
-import Lang from '../../Lang';
+// import Lang from '../../Lang';
 import useLang from '../../hooks/useLang';
 import contentText from '../../Lang/contentText';
 import { useEffect } from 'react';
@@ -56,7 +56,7 @@ function MyContacts() {
   return (
     <Wrapper>
       <Title>{title}</Title>
-      <Lang />
+
       <Form onSubmit={onAddContact} contacts={contacts} />
       <Title>{contactsList}</Title>
       <Filter value={filter} onChange={onChangeFilter} />

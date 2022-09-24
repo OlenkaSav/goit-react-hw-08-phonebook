@@ -1,4 +1,7 @@
 import useForm from '../../hooks/useForm';
+import styled from 'styled-components';
+import useLang from '../../hooks/useLang';
+import contentText from '../../Lang/contentText.json';
 
 const initialState = {
   name: '',
@@ -11,13 +14,15 @@ const RegisterForm = ({ onSubmit }) => {
     initialState,
     onSubmit,
   });
-
+  const { lang } = useLang();
   const { name, email, password } = state;
-
+  const userName = contentText.userName[lang];
+  const userEmail = contentText.userEmail[lang];
+  const userPassword = contentText.userPassword[lang];
   return (
-    <form action="" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="">Имя пользователя:</label>
+    <SForm action="" onSubmit={handleSubmit}>
+      <SField>
+        <label htmlFor="">{userName}: </label>
         <input
           value={name}
           name="name"
@@ -26,9 +31,9 @@ const RegisterForm = ({ onSubmit }) => {
           placeholder="Введите имя пользователя"
           required
         />
-      </div>
-      <div>
-        <label htmlFor="">Email пользователя:</label>
+      </SField>
+      <SField>
+        <label htmlFor="">{userEmail}: </label>
         <input
           value={email}
           name="email"
@@ -36,9 +41,9 @@ const RegisterForm = ({ onSubmit }) => {
           type="email"
           placeholder="Введите email пользователя"
         />
-      </div>
-      <div>
-        <label htmlFor="">Пароль пользователя:</label>
+      </SField>
+      <SField>
+        <label htmlFor="">{userPassword}: </label>
         <input
           value={password}
           name="password"
@@ -46,12 +51,45 @@ const RegisterForm = ({ onSubmit }) => {
           type="password"
           placeholder="Введите пароль пользователя"
         />
-      </div>
-      <div>
-        <button type="submit">Регистрация</button>
-      </div>
-    </form>
+      </SField>
+
+      <StyledBtn type="submit">Регистрация</StyledBtn>
+    </SForm>
   );
 };
 
 export default RegisterForm;
+
+const SForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 600px;
+  height: 100%;
+  padding: 20px;
+  border: solid black 1px;
+  font-size: 25px;
+`;
+
+const SField = styled.div`
+  margin: 10px;
+`;
+
+const StyledBtn = styled.button`
+  margin: auto;
+  margin-left: auto;
+  font-family: inherit;
+  font-size: 25px;
+
+  color: #210672;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+
+  background-color: #4db0ea;
+  border-radius: 10px;
+  -moz-box-shadow: 6px 8px 4px #333333;
+  -webkit-box-shadow: 6px 8px 4px #333333;
+  box-shadow: 6px 8px 4px #333333;
+`;

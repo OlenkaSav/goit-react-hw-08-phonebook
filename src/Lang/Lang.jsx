@@ -29,7 +29,7 @@ const Lang = () => {
 
 const StyledSwitch = styled.div`
   position: absolute;
-  top: 20px;
+  top: 32px;
   right: 20px;
   display: flax;
   align-items: center;
