@@ -19,6 +19,7 @@ const RegisterForm = ({ onSubmit }) => {
 
   const userEmail = contentText.userEmail[lang];
   const userPassword = contentText.userPassword[lang];
+  const loginBtn = contentText.loginBtn[lang];
   return (
     <SForm action="" onSubmit={handleSubmit}>
       {/* <div>
@@ -52,7 +53,7 @@ const RegisterForm = ({ onSubmit }) => {
           placeholder="Введите пароль пользователя"
         />
       </SField>
-      <StyledBtn type="submit">Логин</StyledBtn>
+      <StyledBtn type="submit">{loginBtn}</StyledBtn>
     </SForm>
   );
 };

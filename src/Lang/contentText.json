@@ -69,5 +69,13 @@
   "userPassword": {
     "en": "Password",
     "ua": "Пароль"
+  },
+  "loginBtn": {
+    "en": "Login",
+    "ua": "Увійти"
+  },
+  "registrBtn": {
+    "en": "Registration",
+    "ua": "Регістрація"
   }
 }

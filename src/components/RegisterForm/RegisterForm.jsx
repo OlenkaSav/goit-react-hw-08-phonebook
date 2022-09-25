@@ -19,6 +19,7 @@ const RegisterForm = ({ onSubmit }) => {
   const userName = contentText.userName[lang];
   const userEmail = contentText.userEmail[lang];
   const userPassword = contentText.userPassword[lang];
+  const registrBtn = contentText.registrBtn[lang];
   return (
     <SForm action="" onSubmit={handleSubmit}>
       <SField>
@@ -53,7 +54,7 @@ const RegisterForm = ({ onSubmit }) => {
         />
       </SField>
 
-      <StyledBtn type="submit">Регистрация</StyledBtn>
+      <StyledBtn type="submit">{registrBtn}</StyledBtn>
     </SForm>
   );
 };
