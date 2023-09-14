@@ -14,17 +14,25 @@ function App() {
 
   return (
     <SBody className="App">
-      <Navbar />
-      <UserRoutes />
-      <Lang />
+      <SContainer>
+        <Navbar />
+        <UserRoutes />
+        <Lang />
+      </SContainer>
     </SBody>
   );
 }
 
 const SBody = styled.div`
+  margin: auto;
   padding: 20px;
   background-color: #b4f4f4;
-  height: 100vh;
-  /* font-size: 40px; */
+  min-height: 100vh;
+  height: 100%;`
+;
+const SContainer = styled.div`
+  position: relative;
+  width: 1200px;
+  margin: auto;
 `;
 export default App;

@@ -35,7 +35,7 @@ const StyledList = styled.li`
   padding: 5px;
   font-size: 25px;
   color: #210672;
-  text-shadow: 4px 2px 4px #e9f999;
+  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 const Span = styled.span`
   margin-right: 10px;
@@ -52,9 +52,9 @@ const StyledBtn = styled.button`
 
   background-color: #4db0ea;
   border-radius: 10px;
-  -moz-box-shadow: 6px 8px 4px #333333;
-  -webkit-box-shadow: 6px 8px 4px #333333;
-  box-shadow: 6px 8px 4px #333333;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
 `;
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(

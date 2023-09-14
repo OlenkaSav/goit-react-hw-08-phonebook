@@ -82,7 +82,7 @@ const Wrapper = styled.div`
 const Title = styled.h2`
   font-size: 40px;
   color: #210672;
-  text-shadow: 4px 2px 4px #e9f999;
+  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 
 export default memo(MyContacts);

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 const Lang = () => {
   const { lang, switchLang } = useLang();
-  // console.log('inside lang' + lang);
-
   return (
     <StyledSwitch>
       <StyledLang
@@ -29,7 +27,7 @@ const Lang = () => {
 
 const StyledSwitch = styled.div`
   position: absolute;
-  top: 32px;
+  top: 10px;
   right: 20px;
   display: flax;
   align-items: center;
@@ -39,7 +37,7 @@ const StyledSwitch = styled.div`
   height: 30px;
   border: 5px groove #1c6ea4;
   border-radius: 40px 40px 40px 40px;
-  box-shadow: 6px 8px 4px #333333;
+  box-shadow: 3px 4px 2px #333333;
   cursor: pointer;
 `;
 

@@ -22,35 +22,24 @@ const RegisterForm = ({ onSubmit }) => {
   const loginBtn = contentText.loginBtn[lang];
   return (
     <SForm action="" onSubmit={handleSubmit}>
-      {/* <div>
-        <label htmlFor="">Имя пользователя:</label>
-        <input
-          value={name}
-          name="name"
-          onChange={handleChange}
-          type="text"
-          placeholder="Введите имя пользователя"
-          required
-        />
-      </div> */}
       <SField>
         <label htmlFor="">{userEmail}: </label>
-        <input
+        <StyledInput
           value={email}
           name="email"
           onChange={handleChange}
           type="email"
-          placeholder="Введите email пользователя"
+          placeholder="Введіть email користувача"
         />
       </SField>
       <SField>
         <label htmlFor="">{userPassword}: </label>
-        <input
+        <StyledInput
           value={password}
           name="password"
           onChange={handleChange}
           type="password"
-          placeholder="Введите пароль пользователя"
+          placeholder="Введіть пароль користувача"
         />
       </SField>
       <StyledBtn type="submit">{loginBtn}</StyledBtn>
@@ -61,13 +50,25 @@ const RegisterForm = ({ onSubmit }) => {
 const SForm = styled.form`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   width: 600px;
   height: 100%;
   padding: 20px;
   border: solid black 1px;
   font-size: 25px;
+`;
+
+const StyledInput = styled.input`
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
+  font-size: 20px;
 `;
 
 const SField = styled.div`
@@ -87,9 +88,9 @@ const StyledBtn = styled.button`
 
   background-color: #4db0ea;
   border-radius: 10px;
-  -moz-box-shadow: 6px 8px 4px #333333;
-  -webkit-box-shadow: 6px 8px 4px #333333;
-  box-shadow: 6px 8px 4px #333333;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
 `;
 
 export default RegisterForm;

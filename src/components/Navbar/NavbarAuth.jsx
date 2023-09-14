@@ -12,7 +12,7 @@ const NavbarAuth = () => {
 
 const SPanel = styled.div`
   margin-left: auto;
-  margin-right: 120px;
-  font-size: 40px;
+  margin-right: 130px;
+  font-size: 30px;
 `;
 export default NavbarAuth;

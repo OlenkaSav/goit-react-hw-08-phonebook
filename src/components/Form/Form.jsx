@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { langContext } from '../../Lang/LangContext';
 import contentText from '../../Lang/contentText.json';
-// import { useForm } from 'react-hook-form';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -95,19 +94,19 @@ const StyledLable = styled.label`
   align-items: center;
   margin: 10px 0px;
   font-size: 30px;
-  /* font-weight: 500; */
   color: #210672;
-  text-shadow: 4px 2px 4px #e9f999;
+  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 
 const StyledInput = styled.input`
   width: 180px;
   height: 30px;
+  border-radius: 10px;
   margin-left: 10px;
-  /* margin-bottom: 5px; */
-  -moz-box-shadow: 6px 8px 4px #333333;
-  -webkit-box-shadow: 6px 8px 4px #333333;
-  box-shadow: 6px 8px 4px #333333;
+  padding-left: 10px;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
   font-size: 20px;
 `;
 
@@ -124,7 +123,7 @@ const StyledBtn = styled.button`
   box-shadow: ${props =>
     props.disabled
       ? `0px 0px 4px #333333`
-      : `6px 8px 4px
+      : `3px 4px 2px
     #333333`};
 `;
 export default Form;

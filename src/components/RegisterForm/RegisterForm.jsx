@@ -20,37 +20,40 @@ const RegisterForm = ({ onSubmit }) => {
   const userEmail = contentText.userEmail[lang];
   const userPassword = contentText.userPassword[lang];
   const registrBtn = contentText.registrBtn[lang];
+  const enterName = contentText.enterName[lang];
+  const enterEmail = contentText.enterEmail[lang];
+  const enterPass= contentText.enterPass[lang];
   return (
     <SForm action="" onSubmit={handleSubmit}>
       <SField>
         <label htmlFor="">{userName}: </label>
-        <input
+        <StyledInput
           value={name}
           name="name"
           onChange={handleChange}
           type="text"
-          placeholder="Введите имя пользователя"
+          placeholder={enterName}
           required
         />
       </SField>
       <SField>
         <label htmlFor="">{userEmail}: </label>
-        <input
+        <StyledInput
           value={email}
           name="email"
           onChange={handleChange}
           type="email"
-          placeholder="Введите email пользователя"
+          placeholder={enterEmail}
         />
       </SField>
       <SField>
         <label htmlFor="">{userPassword}: </label>
-        <input
+        <StyledInput
           value={password}
           name="password"
           onChange={handleChange}
           type="password"
-          placeholder="Введите пароль пользователя"
+          placeholder={enterPass}
         />
       </SField>
 
@@ -90,7 +93,20 @@ const StyledBtn = styled.button`
 
   background-color: #4db0ea;
   border-radius: 10px;
-  -moz-box-shadow: 6px 8px 4px #333333;
-  -webkit-box-shadow: 6px 8px 4px #333333;
-  box-shadow: 6px 8px 4px #333333;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
+`;
+
+const StyledInput = styled.input`
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  -moz-box-shadow: 3px 4px 2px #333333;
+  -webkit-box-shadow: 3px 4px 2px #333333;
+  box-shadow: 3px 4px 2px #333333;
+  font-size: 20px;
 `;

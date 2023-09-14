@@ -29,7 +29,8 @@ const Layout = styled.div`
 `;
 const SContacts = styled(NavLink)`
   display: flex;
-  margin-left: 600px;
+  margin-left: 400px;
+  text-decoration: none; 
 `;
 
 export default Navbar;

@@ -1,10 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-
 import LoginForm from '../../components/LoginForm/LoginForm';
-
 import { login } from '../../redux/auth/authOperations';
-
 import { getAuthError } from '../../redux/selectors';
 import useAuth from 'hooks/useAuth';
 import styled from 'styled-components';

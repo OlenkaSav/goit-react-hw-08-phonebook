@@ -60,11 +60,11 @@
   },
   "userName": {
     "en": "Enter user name",
-    "ua": "Введіть ім'я користувача"
+    "ua": "Введіть ім'я"
   },
   "userEmail": {
     "en": "Enter user email",
-    "ua": "Введіть пошту користувача"
+    "ua": "Введіть пошту"
   },
   "userPassword": {
     "en": "Password",
@@ -77,5 +77,17 @@
   "registrBtn": {
     "en": "Registration",
     "ua": "Регістрація"
+  },
+  "enterName": {
+    "en": "Enter name",
+    "ua": "Введіть ім'я"
+  },
+    "enterEmail": {
+    "en": "Enter email",
+    "ua": "Введіть пошту"
+  },
+    "enterPass": {
+    "en": "Enter password",
+    "ua": "Введіть пароль"
   }
 }
