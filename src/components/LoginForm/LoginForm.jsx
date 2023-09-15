@@ -20,6 +20,8 @@ const RegisterForm = ({ onSubmit }) => {
   const userEmail = contentText.userEmail[lang];
   const userPassword = contentText.userPassword[lang];
   const loginBtn = contentText.loginBtn[lang];
+  const enterEmail = contentText.enterEmail[lang];
+  const enterPass= contentText.enterPass[lang];
   return (
     <SForm action="" onSubmit={handleSubmit}>
       <SField>
@@ -29,7 +31,7 @@ const RegisterForm = ({ onSubmit }) => {
           name="email"
           onChange={handleChange}
           type="email"
-          placeholder="Введіть email користувача"
+          placeholder={enterEmail}
         />
       </SField>
       <SField>
@@ -39,7 +41,7 @@ const RegisterForm = ({ onSubmit }) => {
           name="password"
           onChange={handleChange}
           type="password"
-          placeholder="Введіть пароль користувача"
+          placeholder={enterPass}
         />
       </SField>
       <StyledBtn type="submit">{loginBtn}</StyledBtn>

@@ -9,7 +9,6 @@ const Lang = () => {
       <StyledLang
         onClick={switchLang}
         data={lang === 'ua' ? 'currentLang' : 'secondLang'}
-        //   className={lang === 'ua' ? styles.currentLang : styles.lang}
       >
         UA
       </StyledLang>
@@ -17,7 +16,6 @@ const Lang = () => {
       <StyledLang
         onClick={switchLang}
         data={lang === 'en' ? 'currentLang' : 'secondLang'}
-        //   className={lang === 'ru' ? styles.currentLang : styles.lang}
       >
         EN
       </StyledLang>
@@ -46,14 +44,11 @@ const StyledLang = styled.span`
     data === 'currentLang' ? ` underline` : `none`};
   font-size: ${({ data }) => (data === 'currentLang' ? ` 20px` : `17px`)};
   color: ${({ data }) => (data === 'currentLang' ? ` #210672` : `#7c7a7a`)};
-  /* text-shadow: ${({ data }) =>
-    data === 'currentLang' ? `4px 2px 4px #e9f999` : `none`}; */
   font-style: italic;
   font-family: inherit;
 `;
 const StyledSpase = styled.span`
   font-size: 20px;
   color: #210672;
-  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 export default Lang;

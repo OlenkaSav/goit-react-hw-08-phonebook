@@ -1,17 +1,11 @@
-// import React, { Component } from 'react';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import Form from '../Form/Form';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
-
-// import Lang from '../../Lang';
 import useLang from '../../hooks/useLang';
 import contentText from '../../Lang/contentText';
-import { useEffect } from 'react';
-
 import styled from 'styled-components';
 import { Loader } from '../../components/Loader/Loader';
-
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import {
   addContact,
@@ -56,7 +50,6 @@ function MyContacts() {
   return (
     <Wrapper>
       <Title>{title}</Title>
-
       <Form onSubmit={onAddContact} contacts={contacts} />
       <Title>{contactsList}</Title>
       <Filter value={filter} onChange={onChangeFilter} />
@@ -82,7 +75,6 @@ const Wrapper = styled.div`
 const Title = styled.h2`
   font-size: 40px;
   color: #210672;
-  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 
 export default memo(MyContacts);

@@ -31,7 +31,6 @@ const StyledLable = styled.label`
   margin: 10px 0px;
   font-size: 30px;
   color: #210672;
-  /* text-shadow: 4px 2px 4px #e9f999; */
 `;
 
 const StyledInput = styled.input`

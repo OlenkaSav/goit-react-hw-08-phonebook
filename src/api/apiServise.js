@@ -2,7 +2,6 @@ import instance from './auth';
 
 export const getContacts = async () => {
   const { data } = await instance.get('/contacts');
-  console.log(data);
   return data;
 };
 
